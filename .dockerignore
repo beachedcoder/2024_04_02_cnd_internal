@@ -1,0 +1,6 @@
+.git
+.gitignore
+test
+node_modules
+yaml
+*.yaml
