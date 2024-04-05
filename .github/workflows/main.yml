@@ -55,4 +55,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/internal:g.${{ github.sha }}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/internal:g.${{ github.run_id }}
