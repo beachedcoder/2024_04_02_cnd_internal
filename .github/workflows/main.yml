@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@v4.0.2
 
       - name: install node dependencies for testing
-        run: npm install
+        run: npm ci
 
       - name: run node tests to audit codebase
         run: npm test
@@ -55,4 +55,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/external:g.${{ github.run_number }}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/internal:g.${{ github.sha }}
